@@ -12,7 +12,7 @@ function readTextFile(file, callback) {
 
 var redditFeed = document.getElementsByClassName('reddit__feed');
 
-readTextFile("NASAreddit.json", function(text){
+readTextFile("https://www.reddit.com/r/nasa.json", function(text){
     let NASARedditData = JSON.parse(text);
     console.log(NASARedditData);
 
@@ -36,12 +36,5 @@ readTextFile("NASAreddit.json", function(text){
         }
         redditFeed[0].appendChild(makeSection);
     });
-    /*
-    for (var key in NASARedditData) {
-        if (NASARedditData.hasOwnProperty(key)) {
-            console.log(key + " -> " + NASARedditData[key]);
-        }
-    }
-    */
-    //console.log(NASARedditData.data.children[1].title);
+
 });
